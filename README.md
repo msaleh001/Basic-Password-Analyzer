@@ -47,7 +47,6 @@ if sum(characters) > 3:
 print(f"Password has {str(sum(characters))} different character types, adding {str(sum(characters) - 1)} points!")
 
 
-
 if score < 4:
     print(f"This Password is weak! Score: {str(score)} / 7")
     
