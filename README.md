@@ -19,7 +19,9 @@ score = 0
 with open('common.txt', 'r') as f:
     common = f.read().splitlines()
 
-    if password in common:
+# You can find a password list in the format of a .txt file from google. In this case I named that filed common
+
+if password in common:
         print("This password is common, please use another. Score: 0 / 7")
         exit()
 
@@ -36,17 +38,25 @@ print(f"Password length is {str(length)}, adding {str(score)} points!")
 
 if sum(characters) > 1:
     score += 1
+    
 if sum(characters) > 2:
     score += 1
+    
 if sum(characters) > 3:
     score += 1
+
 print(f"Password has {str(sum(characters))} different character types, adding {str(sum(characters) - 1)} points!")
+
+
 
 if score < 4:
     print(f"This Password is weak! Score: {str(score)} / 7")
+    
 elif score == 4:
     print(f"This password is ok! Score: {str(score)} / 7")
+    
 elif score > 4 and score < 6:
     print(f"This password is pretty good! Score: {str(score)} / 7")
+    
 elif score >= 6:
     print(f"This password is strong! Score: {str(score)} / 7")
