@@ -18,7 +18,7 @@ score = 0
 with open('common.txt', 'r') as f:
     common = f.read().splitlines()
 
-# You can find a password list in the format of a .txt file from google. In this case I named that filed common
+# You can find a password list in the format of a .txt file from google. In this case I named that file common
 
 if password in common:
         print("This password is common, please use another. Score: 0 / 7")
